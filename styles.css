@@ -1,49 +1,89 @@
+/* General body styling */
 body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #000;
-    font-family: Arial, sans-serif;
-    color: white;
+    background: linear-gradient(135deg, #1e1e2f, #2d2d47);
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
 }
 
+/* Container for the Tetris game */
 .tetris-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 350px;
+    background: #29293d;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background: #383850;
+    border-bottom: 2px solid #4c4c66;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ffd700;
+}
+
+header .score {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* Canvas styling */
+main {
+    width: 100%;
+    padding: 10px;
+    background: #1e1e2f;
 }
 
 canvas {
-    border: 2px solid white;
-    background: #000;
+    display: block;
+    margin: 0 auto;
+    background: #212135;
+    border: 2px solid #4c4c66;
+    border-radius: 10px;
 }
 
-.scoreboard {
-    margin-top: 10px;
+/* Footer and button styling */
+footer {
+    padding: 15px 0;
+    background: #383850;
+    width: 100%;
     text-align: center;
 }
 
-h1 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-p {
-    font-size: 1.2rem;
-    margin: 5px 0;
-}
-
 button {
+    background: #ffd700;
+    color: #29293d;
+    font-size: 1.1rem;
     padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background: #333;
     border: none;
+    border-radius: 20px;
     cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 button:hover {
-    background: #555;
+    background: #e6c200;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(1);
+    background: #d4b000;
 }
